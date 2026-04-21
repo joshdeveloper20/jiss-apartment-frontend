@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import "material-symbols";
+
+@theme {
+  --color-luxuryBrown: #8b5e3c;
+  --color-mutedGold: #cba135;
+  --color-softCream: #f5efe6;
+  --color-luxuryBg: #fafafa;
+  --color-luxuryText: #1a1a1a;
+  --color-bgmutedGold: #ffffff;
+  --color-textluxuryBrown: #1a1a1a;
+  --color-textmutedGold: #6b6b6b;
+  --color-luxe-luxuryBrown: #8b5e3c;
+  --color-luxe-mutedGold: #cba135;
+  --color-luxe-bg: #fafafa;
+  --color-luxe-surface: #ffffff;
+  --color-luxe-text-pri: #1a1a1a;
+  --color-luxe-text-sec: #6b6b6b;
+  --color-surface: #ffffff;
+  --color-background-light: #fafafa;
+  --border-radius-luxury: 16px;
+  --border-radius-custom: 16px;
+  --border-radius-theme: 16px;
+  --border-radius-luxe: 16px;
+  --font-family-sans: [ "Inter", "sans-serif"];
+  --font-family-heading: [ "Poppins", "sans-serif"];
+}
+
+@layer components {
+  .glass-header {
+    background: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .hero-gradient {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("/images/hero-img.avif");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .room-hero-gradient {
+    background:
+      linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%),
+      url("/images/room-bg.jpg");
+  }
+
+  .luxury-card-shadow {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  }
+
+  .room-card:hover .room-overlay {
+    opacity: 1;
+  }
+
+  .logoimg {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .sticky-card {
+    top: 100px;
+  }
+
+  .blur-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Custom scrollbar for a luxury feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8b5e3c;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
