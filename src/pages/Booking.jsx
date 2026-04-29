@@ -80,6 +80,27 @@ const Booking = () => {
     fetchBlockedDates();
   }, [bookingForm.roomId]);
 
+  /*
+  // Auto-dismiss success message after 5 seconds
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage("");
+      }, 500); // 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
+
+  // Auto-dismiss error message after 5 seconds
+  useEffect(() => {
+    if (errorMessage) {
+      const timer = setTimeout(() => {
+        setErrorMessage("");
+      }, 500); // 5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [errorMessage]);
+*/
   const selectedRoom = useMemo(
     () => rooms.find((room) => room._id === bookingForm.roomId),
     [rooms, bookingForm.roomId],
@@ -188,6 +209,8 @@ const Booking = () => {
             );
             setBookingForm((prev) => ({
               ...prev,
+              checkInDate: "",
+              checkOutDate: "",
               guestName: "",
               guestEmail: "",
               guestPhone: "",
@@ -212,6 +235,8 @@ const Booking = () => {
         );
         setBookingForm((prev) => ({
           ...prev,
+          checkInDate: "",
+          checkOutDate: "",
           guestName: "",
           guestEmail: "",
           guestPhone: "",
@@ -432,7 +457,7 @@ const Booking = () => {
               type="submit"
               onClick={handleSubmit}
               disabled={submitting || !bookingForm.roomId}
-              className="inline-flex w-full items-center justify-center rounded-3xl bg-mutedGold px-6 py-4 text-sm font-bold text-black transition hover:bg-opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+              className="inline-flex w-full items-center justify-center rounded-3xl cursor-pointer bg-mutedGold px-6 py-4 text-sm font-bold text-black transition hover:bg-opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {submitting ? "Booking…" : "Confirm Booking"}
             </button>

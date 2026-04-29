@@ -34,12 +34,6 @@ const Footer = () => {
             >
               𝕏
             </a>
-            <a
-              className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-mutedGold transition-colors"
-              href="#"
-            >
-              ig
-            </a>
           </div>
         </div>
         {/* Quick Links */}
@@ -112,15 +106,16 @@ const Footer = () => {
           <div className="space-y-4 text-sm text-gray-400">
             <p className="flex items-start gap-2">
               <span>📍</span>
-              Plot 12, Victoria Island, Lagos
+              No. 5, Jiss Drive, Industrial Gate, Radio Estate off NTA Road,
+              Port Harcourt, Rivers State, Nigeria.
             </p>
             <p className="flex items-start gap-2">
               <span>📞</span>
-              +234 800 123 4567
+              +234 916 763 0305
             </p>
             <p className="flex items-start gap-2">
               <span>✉️</span>
-              hello@luxenigeria.com
+              jissapartment@gmail.com
             </p>
             <div className="mt-6">
               <h5 className="text-white font-bold mb-3">Newsletter</h5>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import logo from "../assets/images/logo.jpg";
+import logo from "../assets/images/jiss_logo.jpeg";
 
 const pageLinks = [
   {

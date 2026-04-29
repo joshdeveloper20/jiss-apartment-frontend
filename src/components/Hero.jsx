@@ -10,9 +10,11 @@ import gym1 from "../assets/images/gym-1.png";
 import lounge1 from "../assets/images/lounge-1.png";
 import compound1 from "../assets/images/compound-1.png";
 import reception from "../assets/images/reception.png";
+import jissView from "../assets/images/jiss_view.jpeg";
 
 const Hero = () => {
   const images = [
+    jissView,
     outside1,
     outside2,
     outside3,
@@ -38,7 +40,7 @@ const Hero = () => {
       }, 1000);
 
       return () => clearTimeout(timeout);
-    }, 3000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -137,7 +139,7 @@ const Hero = () => {
           </div>
         </div> */}
         {/* Trust Badges */}
-        <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-80">
+        {/* <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-80">
           <div className="flex items-center gap-2">
             <span className="text-mutedGold">★</span>
             <span className="text-sm font-medium">Top-rated in Lagos 2024</span>
@@ -148,7 +150,7 @@ const Hero = () => {
               Trusted by 5,000+ guests
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

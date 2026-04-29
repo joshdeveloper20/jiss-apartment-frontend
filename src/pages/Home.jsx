@@ -2,6 +2,7 @@ import About from "../components/About";
 import Amenities from "../components/Amenities";
 import Blogs from "../components/Blogs";
 import CTA from "../components/CTA";
+import Facilities from "../components/Facilities";
 import Featured from "../components/Featured";
 import Hero from "../components/Hero";
 import LocationSection from "../components/LocationSection";
@@ -17,6 +18,7 @@ const Home = () => {
       <Featured rooms={rooms} loading={loading} error={error} />
       <About />
       <Amenities />
+      <Facilities />
       {/* <SpecialOffers /> */}
       <Testimonials />
       {/* <Blogs /> */}
