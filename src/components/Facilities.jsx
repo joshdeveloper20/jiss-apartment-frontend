@@ -85,7 +85,11 @@ const Facilities = () => {
           >
             {allImages.map((item, index) => (
               <div key={index} className="carousel-slide">
-                <img src={item.img} alt={`${item.name} ${index + 1}`} />
+                <img
+                  loading="lazy"
+                  src={item.img}
+                  alt={`${item.name} ${index + 1}`}
+                />
                 <div className="slide-label">{item.name}</div>
               </div>
             ))}

@@ -1,22 +1,12 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import BookingSkeleton from "../components/skeletons/BookingSkeleton";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, isAdmin, loading } = useAuth();
 
   if (loading) {
-    return (
-      <div
-        className="min-h-screen flex items-center justify-center"
-        style={{ backgroundColor: "#fafafa" }}
-      >
-        <div className="text-center">
-          <p style={{ color: "#8b5e3c" }} className="text-lg font-semibold">
-            Loading...
-          </p>
-        </div>
-      </div>
-    );
+    return <BookingSkeleton />;
   }
 
   if (!isAuthenticated) {

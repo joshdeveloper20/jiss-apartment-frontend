@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const RoomDetailsHero = ({ room }) => {
   const title = room?.name || "Executive Suite";
-  const location = room?.location || "Victoria Island, Lagos";
+  const location = room?.location || "Port Harcourt, Nigeria";
   const rating = room?.rating ?? 4.8;
   const reviews = room?.reviewCount ?? 120;
   const mainImage =
@@ -70,6 +70,7 @@ const RoomDetailsHero = ({ room }) => {
           <img
             alt="Executive Suite Lagos"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl"
+            loading="lazy"
             src={mainImage}
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
@@ -119,6 +120,7 @@ const RoomDetailsHero = ({ room }) => {
             <img
               alt={`${title} photo 1`}
               className="w-full h-full object-cover hover:opacity-90 cursor-pointer transition-opacity"
+              loading="lazy"
               src={thumbnails[0]}
             />
           </div>
@@ -126,6 +128,7 @@ const RoomDetailsHero = ({ room }) => {
             <img
               alt={`${title} photo 2`}
               className="w-full h-full object-cover hover:opacity-90 cursor-pointer transition-opacity"
+              loading="lazy"
               src={thumbnails[1]}
             />
             <button

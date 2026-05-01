@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import RoomCardSkeletonList from "./skeletons/RoomCardSkeleton";
 import { nairaFormatter } from "../services/formatPrice";
 
 const RoomShowCase = ({ rooms, loading, error }) => {
@@ -59,7 +60,7 @@ const RoomShowCase = ({ rooms, loading, error }) => {
       <motion.div layout>
         <div className="space-y-12">
           {loading ? (
-            <p className="text-center text-gray-500">Loading rooms...</p>
+            <RoomCardSkeletonList count={3} />
           ) : error ? (
             <p className="text-center text-red-500">{error}</p>
           ) : filteredRooms.length === 0 ? (
@@ -91,6 +92,7 @@ const RoomShowCase = ({ rooms, loading, error }) => {
                       <img
                         alt={name}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                         src={images?.[0]?.url}
                       />
                     </div>

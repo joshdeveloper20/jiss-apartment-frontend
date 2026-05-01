@@ -135,8 +135,8 @@ const Footer = () => {
       </div>
       <div className="border-t border-white/10 pt-10 text-center text-gray-500 text-xs">
         <p>
-          © 2024 LuxeNigeria Luxury Hotels. All rights reserved. Designed for
-          the African Elite.
+          © {new Date().getFullYear()} Jiss Apartments & Hotels. All rights
+          reserved.
         </p>
       </div>
     </footer>

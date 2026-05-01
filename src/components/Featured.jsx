@@ -35,6 +35,7 @@ const Featured = ({ rooms, loading, error }) => {
                   <img
                     alt={name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                     src={images[0]?.url}
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-luxuryBrown">

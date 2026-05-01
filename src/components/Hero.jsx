@@ -31,6 +31,14 @@ const Hero = () => {
   const [imageUrl, setImageUrl] = useState(images[0]);
   const [isFading, setIsFading] = useState(false);
 
+  // Preload all hero images on mount
+  useEffect(() => {
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsFading(true);
@@ -64,12 +72,11 @@ const Hero = () => {
         </span>
         <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Experience Luxury <span className="text-mutedGold">Redefined</span> in
-          Nigeria
+          Port Harcourt, Nigeria
         </h1>
         <p className="text-lg md:text-xl font-light opacity-90 mb-10 max-w-2xl mx-auto">
-          Discover an oasis of elegance and comfort in the heart of West Africa.
-          From Lagos shores to Abuja's hills, experience the gold standard of
-          African luxury.
+          Discover an oasis of elegance and comfort in the heart of Port
+          Harcourt, Nigeria, experience the gold standard of African luxury.
         </p>
         {/* Search Bar Card */}
         {/* <div className="bg-white p-6 md:p-8 rounded-luxury shadow-2xl flex flex-wrap lg:flex-nowrap gap-4 items-end text-luxuryText text-left relative z-10">

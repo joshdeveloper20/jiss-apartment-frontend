@@ -24,6 +24,7 @@ const Testimonials = () => {
                 <img
                   alt="Guest"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                   src={testimonialImg}
                 />
               </div>

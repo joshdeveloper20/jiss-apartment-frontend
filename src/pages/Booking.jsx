@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { createBooking, getRoomBookings, getRooms } from "../services/api";
 import { initializePayment } from "../services/paystack";
+import BookingSkeleton from "../components/skeletons/BookingSkeleton";
 
 const formatPrice = (amount) =>
   new Intl.NumberFormat("en-NG", {
@@ -262,11 +263,7 @@ const Booking = () => {
   };
 
   if (loading) {
-    return (
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-        <p className="text-center text-lg font-medium">Loading booking page…</p>
-      </main>
-    );
+    return <BookingSkeleton />;
   }
 
   return (

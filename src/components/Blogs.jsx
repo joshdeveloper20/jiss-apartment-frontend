@@ -64,6 +64,7 @@ const Blogs = () => {
               <img
                 alt={title}
                 className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                loading="lazy"
                 src={image}
               />
             </div>

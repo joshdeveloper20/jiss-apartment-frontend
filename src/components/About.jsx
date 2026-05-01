@@ -9,6 +9,7 @@ const About = () => {
             <img
               alt="Luxe Entrance"
               className="w-full aspect-square object-cover"
+              loading="lazy"
               src={aboutImg}
             />
           </div>

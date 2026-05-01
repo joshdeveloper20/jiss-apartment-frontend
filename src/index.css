@@ -1,6 +1,22 @@
 @import "tailwindcss";
 @import "material-symbols";
 
+/* Skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: 0.375rem;
+}
+
 @theme {
   --color-luxuryBrown: #8b5e3c;
   --color-mutedGold: #cba135;
