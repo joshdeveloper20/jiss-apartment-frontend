@@ -1,4 +1,4 @@
-import outsideImg from "../assets/images/jiss_view.jpeg";
+import outsideImg from "../assets/images/jiss_view.webp";
 import room1 from "../assets/images/room1.png";
 import Amenities from "../components/Amenities";
 import Facilities from "../components/Facilities";

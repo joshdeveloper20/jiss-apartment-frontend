@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
-import pool1 from "../assets/images/pool-1.png";
-import pool2 from "../assets/images/pool-2.png";
-import pool3 from "../assets/images/pool-3.png";
-import snoker1 from "../assets/images/snoker-1.png";
-import snoker2 from "../assets/images/snoker-2.png";
-import gym1 from "../assets/images/gym-1.png";
-import gym2 from "../assets/images/gym-2.png";
-import gym3 from "../assets/images/gym-3.png";
-import gym4 from "../assets/images/gym-4.png";
-import lounge1 from "../assets/images/lounge-1.png";
-import lounge2 from "../assets/images/lounge-2.png";
-import lounge3 from "../assets/images/lounge-3.png";
-import lounge4 from "../assets/images/lounge-4.png";
-import lounge5 from "../assets/images/lounge-5.png";
+import pool1 from "../assets/images/pool-1.webp";
+import pool2 from "../assets/images/pool-2.webp";
+import pool3 from "../assets/images/pool-3.webp";
+import snoker1 from "../assets/images/snoker-1.webp";
+import snoker2 from "../assets/images/snoker-2.webp";
+import gym1 from "../assets/images/gym-1.webp";
+import gym2 from "../assets/images/gym-2.webp";
+import gym3 from "../assets/images/gym-3.webp";
+import gym4 from "../assets/images/gym-4.webp";
+import lounge1 from "../assets/images/lounge-1.webp";
+import lounge2 from "../assets/images/lounge-2.webp";
+import lounge3 from "../assets/images/lounge-3.webp";
+import lounge4 from "../assets/images/lounge-4.webp";
+import lounge5 from "../assets/images/lounge-5.webp";
 
 const facilities = [
   { name: "Swimming Pool", images: [pool1, pool2, pool3] },

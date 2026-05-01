@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import outside1 from "../assets/images/outside-1.png";
-import outside2 from "../assets/images/outside-2.png";
-import outside3 from "../assets/images/outside-3.png";
-import outside4 from "../assets/images/outside-4.png";
-import pool from "../assets/images/pool-1.png";
-import snoker1 from "../assets/images/snoker-1.png";
-import snoker2 from "../assets/images/snoker-2.png";
-import gym1 from "../assets/images/gym-1.png";
-import lounge1 from "../assets/images/lounge-1.png";
-import compound1 from "../assets/images/compound-1.png";
-import reception from "../assets/images/reception.png";
-import jissView from "../assets/images/jiss_view.jpeg";
+import outside1 from "../assets/images/outside-1.webp";
+import outside2 from "../assets/images/outside-2.webp";
+import outside3 from "../assets/images/outside-3.webp";
+import outside4 from "../assets/images/outside-4.webp";
+import pool from "../assets/images/pool-1.webp";
+import snoker1 from "../assets/images/snoker-1.webp";
+import snoker2 from "../assets/images/snoker-2.webp";
+import gym1 from "../assets/images/gym-1.webp";
+import lounge1 from "../assets/images/lounge-1.webp";
+import compound1 from "../assets/images/compound-1.webp";
+import reception from "../assets/images/reception.webp";
+import jissView from "../assets/images/jiss_view.webp";
 
 const Hero = () => {
   const images = [

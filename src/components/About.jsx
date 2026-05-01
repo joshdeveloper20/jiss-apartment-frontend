@@ -1,4 +1,4 @@
-import aboutImg from "../assets/images/jiss_view.jpeg";
+import aboutImg from "../assets/images/jiss_view.webp";
 
 const About = () => {
   return (
