@@ -1,4 +1,4 @@
-import receptionImg from "../assets/images/reception.png";
+import receptionImg from "../assets/images/reception.webp";
 
 const info = [
   {

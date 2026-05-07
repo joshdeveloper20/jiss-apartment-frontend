@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../services/api";
 import { useAuth } from "../context/AuthContext";
-import gymImg from "../assets/images/gym-1.png";
+import gymImg from "../assets/images/gym-1.webp";
 
 const Login = () => {
   const [email, setEmail] = useState("");

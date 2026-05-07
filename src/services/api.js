@@ -36,6 +36,20 @@ export const getRoomBookings = async (roomId) => {
   return response.data;
 };
 
+export const checkRoomAvailability = async (
+  roomId,
+  checkInDate,
+  checkOutDate,
+) => {
+  const response = await api.get(`/rooms/${roomId}/availability`, {
+    params: {
+      checkInDate,
+      checkOutDate,
+    },
+  });
+  return response.data;
+};
+
 export const getRoomBySlug = async (slug) => {
   const rooms = await getRooms();
   const room = rooms.find((item) => item.slug === slug);
@@ -108,5 +122,3 @@ export const getUsers = async () => {
   const response = await api.get("/users");
   return response.data;
 };
-
-

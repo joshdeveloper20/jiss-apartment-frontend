@@ -17,8 +17,8 @@ const Home = () => {
       <Hero />
       <Featured rooms={rooms} loading={loading} error={error} />
       <About />
-      <Amenities />
       <Facilities />
+      <Amenities />
       {/* <SpecialOffers /> */}
       <Testimonials />
       {/* <Blogs /> */}

@@ -11,6 +11,7 @@ import SignUp from "./pages/SignUp";
 import Booking from "./pages/Booking";
 import Admin from "./pages/Admin";
 import UserDashboard from "./pages/UserDashboard";
+import Availability from "./pages/Availability";
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserProtectedRoute from "./components/UserProtectedRoute";
 import { AuthProvider } from "./context/AuthContext";
@@ -35,6 +36,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/rooms" element={<Rooms />} />
             <Route path="/:category/:slug" element={<RoomDetail />} />
+            <Route path="/availability" element={<Availability />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/booking" element={<Booking />} />

@@ -68,8 +68,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Amenities />
       <Facilities />
+      <Amenities />
 
       {/* Amenities Section */}
       <section className="py-24 bg-gradient-to-b from-white to-gray-50">

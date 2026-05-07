@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import aboutImg from "../assets/images/jiss_view.webp";
 
 const About = () => {
@@ -121,9 +122,12 @@ const About = () => {
               </div>
             </div>
           </div>
-          <button className="bg-luxuryBrown text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all">
+          <Link
+            to="/about"
+            className="bg-luxuryBrown text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all cursor-pointer"
+          >
             Learn More About Us
-          </button>
+          </Link>
         </div>
       </div>
     </section>

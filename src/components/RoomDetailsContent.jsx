@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const formatPrice = (amount) =>
   new Intl.NumberFormat("en-NG", {
@@ -84,6 +84,20 @@ const RoomDetailsContent = ({ room }) => {
       params.set("checkOut", checkOut);
     }
     navigate(`/booking?${params.toString()}`);
+  };
+
+  const getAvailabilityLink = () => {
+    const params = new URLSearchParams();
+    if (room?._id) {
+      params.set("roomId", room._id);
+    }
+    if (checkIn) {
+      params.set("checkIn", checkIn);
+    }
+    if (checkOut) {
+      params.set("checkOut", checkOut);
+    }
+    return `/availability?${params.toString()}`;
   };
 
   return (
@@ -346,6 +360,12 @@ const RoomDetailsContent = ({ room }) => {
             >
               Book this room
             </button>
+            <Link
+              to={getAvailabilityLink()}
+              className="w-full block text-center bg-black/10 text-black font-bold py-3 rounded-xl hover:bg-black/20 transition-all border border-black/20"
+            >
+              Check Availability
+            </Link>
             <p className="text-[10px] text-center text-gray-500 uppercase tracking-widest pt-2">
               Complete your reservation on the booking page.
             </p>
@@ -355,4 +375,5 @@ const RoomDetailsContent = ({ room }) => {
     </section>
   );
 };
+
 export default RoomDetailsContent;
