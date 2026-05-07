@@ -157,9 +157,9 @@ const RoomShowCase = ({ rooms, loading, error }) => {
                           >
                             View Details
                           </Link>
-                          <button className="flex-1 sm:flex-none px-6 py-3 bg-luxuryBrown text-white font-bold rounded-xl hover:bg-luxuryBrown/90 transition-shadow shadow-lg shadow-luxuryBrown/20 whitespace-nowrap cursor-pointer">
+                          {/* <button className="flex-1 sm:flex-none px-6 py-3 bg-luxuryBrown text-white font-bold rounded-xl hover:bg-luxuryBrown/90 transition-shadow shadow-lg shadow-luxuryBrown/20 whitespace-nowrap cursor-pointer">
                             Check Availability
-                          </button>
+                          </button> */}
                         </div>
                       </div>
                     </div>

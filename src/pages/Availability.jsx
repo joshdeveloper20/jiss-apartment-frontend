@@ -40,6 +40,7 @@ const Availability = () => {
           checkRoomAvailability(roomId, checkIn, checkOut),
           getRoomById(roomId),
         ]);
+        console.log(roomData);
 
         setAvailabilityData(availData);
         setRoom(roomData);
@@ -71,32 +72,63 @@ const Availability = () => {
   if (error) {
     return (
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-16 min-h-screen flex items-center justify-center">
-        <div className="text-center max-w-md">
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg
-              className="w-8 h-8 text-red-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
+        <div className="relative overflow-hidden rounded-[32px] border border-luxuryBrown/20 bg-gradient-to-br from-luxuryBrown/10 via-white to-mutedGold/10 shadow-2xl shadow-luxuryBrown/20 p-8 sm:p-12 w-full max-w-2xl">
+          <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-mutedGold/30 blur-3xl"></div>
+          <div className="absolute -left-10 bottom-10 h-24 w-24 rounded-full bg-luxuryBrown/20 blur-3xl"></div>
+
+          <div className="relative z-10 flex flex-col items-center text-center gap-6">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-luxuryBrown text-white shadow-xl shadow-luxuryBrown/30">
+              <svg
+                className="h-10 w-10"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
+              >
+                <path d="M12 8v4m0 4v.01" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-luxuryBrown font-semibold mb-2">
+                Oops! Something went wrong
+              </p>
+              <h2 className="text-4xl font-heading font-bold text-luxuryBrown">
+                Unable to load availability
+              </h2>
+            </div>
+
+            <p className="max-w-xl text-slate-600 text-lg">{error}</p>
+
+            <div className="grid gap-3 sm:grid-cols-2 w-full">
+              <Link
+                to="/rooms"
+                className="inline-flex items-center justify-center rounded-2xl bg-mutedGold text-white px-6 py-3 font-bold transition hover:bg-mutedGold/90"
+              >
+                Browse rooms
+              </Link>
+              <button
+                type="button"
+                onClick={() => {
+                  navigate(-1);
+                }}
+                className="inline-flex items-center justify-center rounded-2xl border border-luxuryBrown/20 bg-white px-6 py-3 font-semibold text-luxuryBrown transition hover:bg-luxuryBrown/5"
+              >
+                Try again
+              </button>
+            </div>
+
+            <div className="mt-4 rounded-3xl border border-luxuryBrown/20 bg-white/90 p-4 text-left text-sm text-slate-600 shadow-sm">
+              <p className="font-semibold text-luxuryBrown">Need help?</p>
+              <p className="mt-1">
+                If the issue persists, refresh the page or contact our support
+                team for assistance.
+              </p>
+            </div>
           </div>
-          <h2 className="text-2xl font-heading font-bold text-red-600 mb-2">
-            Error
-          </h2>
-          <p className="text-gray-600 mb-6">{error}</p>
-          <Link
-            to="/rooms"
-            className="inline-block bg-mutedGold text-black font-bold px-8 py-3 rounded-xl hover:bg-mutedGold/90 transition-all"
-          >
-            Back to Rooms
-          </Link>
         </div>
       </main>
     );
@@ -227,7 +259,7 @@ const Availability = () => {
           <div className="flex gap-4">
             <Link
               to={`/rooms/${room?.slug}`}
-              className="flex-1 text-center bg-black/10 text-black font-bold px-6 py-3 rounded-xl hover:bg-black/20 transition-all border border-black/20"
+              className="flex-1 text-center bg-black/10 text-black font-bold px-6 py-3 rounded-xl hover:bg-black/20 transition-all border border-black/20 cursor-pointer"
             >
               Back
             </Link>
@@ -240,7 +272,7 @@ const Availability = () => {
                   params.set("checkOut", checkOut);
                   navigate(`/booking?${params.toString()}`);
                 }}
-                className="flex-1 bg-mutedGold text-black font-bold px-6 py-3 rounded-xl hover:bg-mutedGold/90 transition-all shadow-lg shadow-mutedGold/20"
+                className="flex-1 bg-mutedGold text-black font-bold px-6 py-3 rounded-xl hover:bg-mutedGold/90 transition-all shadow-lg shadow-mutedGold/20 cursor-pointer"
               >
                 Book Now
               </button>
@@ -252,7 +284,7 @@ const Availability = () => {
         <div>
           {room?.images && room.images.length > 0 ? (
             <img
-              src={room.images[0]}
+              src={room.images[0].url}
               alt={room.name}
               className="w-full h-96 object-cover rounded-luxury shadow-lg"
             />
